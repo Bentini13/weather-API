@@ -34,7 +34,7 @@ function App() {
           setLocationName(response.data[0].name);
           axios
             .get(
-              `https://api.openweathermap.org/data/2.5/onecall?lat=${response.data[0].lat}&lon=${response.data[0].lon}&units=metric&exclude=hourly,alerts,minutely&appid=d1f2a96127c5cec6d9f09936530a7fac`
+              `https://api.openweathermap.org/data/2.5/onecall?lat=${response.data[0].lat}&lon=${response.data[0].lon}&units=metric&exclude=hourly,alerts,minutely&appid=${API_KEY}`
             )
             .then((response) => {
               setWeatherData(response.data);
